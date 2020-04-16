@@ -1,0 +1,25 @@
+{
+  "name": "USA_Table",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js",
+    "db:delete": "dropdb USA_Table",
+    "db:create": "createdb USA_Table",
+    "db:schema": "psql -f schema.sql USA_Table",
+    "db:seed": "psql -f seed.sql USA_Table",
+    "db:reset": "npm run db:delete && npm run db:create && npm run db:schema && npm run db:seed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "pg-promise": "^10.5.0"
+  }
+}
