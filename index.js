@@ -39,7 +39,7 @@ async function modelUniverse (){
         })))
     };
 
-// modelUniverse();
+modelUniverse();
 
 async function AgeUniverse (){
     const countTotal = await db.query(`
